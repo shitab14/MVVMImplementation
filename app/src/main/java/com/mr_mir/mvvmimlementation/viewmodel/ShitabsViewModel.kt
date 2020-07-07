@@ -20,4 +20,9 @@ class ShitabsViewModel: ViewModel() {
             _medLiveData.value = it
         }
     }
+
+    fun removeSourceForData(path: String){
+        _medLiveData.removeSource(ShitabsRepository.getData(path))
+    }
+
 }

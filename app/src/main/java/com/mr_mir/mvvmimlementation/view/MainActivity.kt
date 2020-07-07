@@ -59,6 +59,8 @@ class MainActivity : AppCompatActivity(), TextWatcher {
                         loaderView()
                     }
                 }
+                viewModel?.removeSourceForData(path)
+
             })
 
         //Call to Fetch Data
