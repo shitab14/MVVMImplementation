@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), TextWatcher {
         viewModel = ViewModelProvider(this).get(ShitabsViewModel::class.java)
 
         //Observer to Fetch Data
-        viewModel?.myLiveData
+        viewModel?._myLiveData
             ?.observe(this, Observer {
                 when (it.status) {
                     StatusCheck.Status.SUCCESS -> {
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), TextWatcher {
                         loaderView()
                     }
                 }
-                viewModel?.removeSourceForData(path)
+                //viewModel?.removeSourceForData(path)
 
             })
 
